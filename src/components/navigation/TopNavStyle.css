@@ -1,0 +1,24 @@
+.fixed{
+    position: fixed;
+}
+.center{
+    justify-content: center;
+}
+.sticky{
+    position: fixed;
+    width: 100%;
+}
+.keep-right{
+    margin-left: auto;
+}
+
+@media screen and (min-width: 992px){  
+    .auto-display{
+        display: none ;
+    }
+}
+/* .collapse{
+    display: none !important;
+} */
+
+
