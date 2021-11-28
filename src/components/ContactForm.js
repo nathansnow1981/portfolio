@@ -1,70 +1,78 @@
+import Button from "react-bootstrap/Button";
 import React, { useRef } from "react";
+import { Col, Form, Row } from "react-bootstrap";
 import emailjs from "emailjs-com";
-import "./ContactFormStyle.css";
+import "./pages/ContactStyle.css";
+import EmailjsConfig from "../config/EmailjsConfig";
 
-// const apiEndpoint = "http://weather-app.ap-southeast-2.elasticbeanstalk.com/weather-app/v1/owm/currentWeather/name?cityName=Toowoomba";
-// const localEndpoint = "http://localhost:5000/weather-app/v1/owm/currentWeather/name?cityName=Brisbane";
+var config = new EmailjsConfig();
 
+const serviceId = config.serviceId;
+const templateId = config.templateId;
+const userId = config.userId;
 
-const serviceId = "service_gbrxger";
-const templateId = "template_zf3hacp";
-const userId = "user_brg5pYziU2s4ZqpLAk06X";
+const emailPrivacyMsg = "Your email will never be shared with anyone";
 
 const ContactForm = () => {
 
-    const contactForm = useRef();
+  const form = useRef(null);
+  const firstName = useRef(null);
 
-    const sendEmail = (event) => {
+  //Send email function
+  const sendEmail = (event) => {
     event.preventDefault();
-
-    emailjs.sendForm(serviceId, templateId, contactForm.current, userId)
-        .then(() => {
-                alert("Email Sent!");
-            },
-            (error) => {
-                console.log(error.text);
-            }
-        );
-    };
+    emailjs.sendForm(serviceId, templateId, form.current, userId).then(
+      () => {
+        alert("Thanks " + firstName.current.value + ", I'll get back to you as soon as I can");
+        form.current.reset();
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
 
   return (
-    <div >
-      <h1>Contact Me</h1>
-      <p className="welcome-msg">
-        Hi and thanks for checking out my portfolio!
-        <br />
-        Please fill in the info below and I'll be sure to get back to you as fast as I can
-      </p>
-      <div className="row">
-        <div className="col-md-2"></div>
-        <div className="col-md-8">
-          <form className="form" ref={contactForm} onSubmit={sendEmail}>
-            <div className="name">
-              <div className="form-group">
-                <label htmlFor="firstName">First name</label>
-                <input type="text" name="firstName" className="form-control" tabIndex="1" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="lastName">Last Name</label>
-                <input type="text" name="lastName" className="form-control" tabIndex="2" />
-              </div>
-            </div>
-            <div className="email form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" id="email" className="form-control" placeholder="example@email.com" tabIndex="3" />
-            </div>
-            <div className="message form-group">
-              <label htmlFor="message">Message</label>
-              <textarea placeholder="Start typing..." rows="5" className="form-control" name="message" tabIndex="4" />
-            </div>
-            <button type="submit"  className="btn btn-outline-primary grow" tabIndex="5">
-                Send
-            </button>
-          </form>
-        </div>
-        <div className="col-md-2"></div>
-      </div>
-    </div>
+      <Form onSubmit={sendEmail} ref={form}>
+        <Row>
+          <Col md="6 mx-auto text-start">
+            <Form.Group className="mb-3 ml-auto" controlId="formFirstName">
+              <Form.Label>First Name</Form.Label>
+              <Form.Control type="text" ref={firstName}></Form.Control>
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col md="6 mx-auto text-start">
+            <Form.Group className="mb-3" controlId="formLastName">
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col md="6 mx-auto text-start">
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Text className="text-muted">
+                <i>{emailPrivacyMsg}</i>
+              </Form.Text>
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col md="6 mx-auto text-start">
+            <Form.Group className="mb-3" controlId="formMessage">
+              <Form.Label>Message</Form.Label>
+              <Form.Control as="textarea" rows={4} placeholder="Enter your message" />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Button variant="outline-primary" type="submit">
+          Submit
+        </Button>
+      </Form>
   );
 };
 
