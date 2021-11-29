@@ -10,16 +10,16 @@ const SocialNav = () => {
     return (
       <div>
         <div>
-          <Link className="social-icon" to="https://github.com/nathansnow1981" title={githubTitle} style={{ color: "#171515" }}>
+          <Link className="social-icon" to="https://github.com/nathansnow1981" title={githubTitle}>
             <i className="fab fa-github fa-2x grow"></i>
           </Link>
-          <Link className="social-icon" to="https://www.facebook.com/nathan.snow.399" title={facebookTitle} style={{ color: "#3b5998" }}>
+          <Link className="social-icon" to="https://www.facebook.com/nathan.snow.399" title={facebookTitle}>
             <i className="fab fa-facebook fa-2x grow"></i>
           </Link>
-          <Link className="social-icon" to="https://discordapp.com/users/821987974690373662" title={discordTitle} style={{ color: "#7289d9" }}>
+          <Link className="social-icon" to="https://discordapp.com/users/821987974690373662" title={discordTitle}>
             <i className="fab fa-discord fa-2x grow"></i>
           </Link>
-          <Link className="social-icon" to="https://stackoverflow.com/users/14024740/aussiedev81" title={stackOverflowTitle} style={{ color: "#F47F24" }}>
+          <Link className="social-icon" to="https://stackoverflow.com/users/14024740/aussiedev81" title={stackOverflowTitle}>
             <i className="fab fa-stack-overflow fa-2x grow"></i>
           </Link>
         </div>
