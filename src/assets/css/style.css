@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+/* Index  */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* App */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#page-container {
+  position: relative;
+  width: 100%;
+  background-color: #212529;
+  color: #f0f6fc;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;   
+  min-height: 84vh;
+}
+
+
+/* About */
+code{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 150%;
+    color: linen;
+}
+.intro{
+    font-family: 'Dancing Script', cursive;
+}
+.laptop {
+    font-size: xxx-large;
+}
+
+a{
+    color: lightsalmon;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(247, 179, 54);
+}
+.grow10 { 
+    transition: all .1s ease-in-out; 
+}
+.grow10:hover { 
+    transform: scale(1.1); 
+    
+}
+.inline{
+    display: inline-block;
+}
+
+/* Contact */
+@media screen and (max-width: 700px){
+    .welcome-msg{
+        font-size: small;
+    }
+    .form-label{
+        font-size: small;
+    }
+}
+.form-control{
+  border-color: #30363d;
+  background-color: #dfe4e9;
+}
+.btn{
+  border-radius: .75rem .75rem .75rem 0;
+}
+.privacy-msg{
+  color: #dfe4e9 !important;
+}
+
+/* Footer */
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.footer-nav-link{
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+a.footer-nav-link:hover{
+    color: orange;
+}
+.social-icon{
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    size: 50px;
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.2); }
+
+footer {
+    text-align: center;
+    border-top: 1px solid lightgray;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+}
+
+.social-icon{
+    color: aliceblue;
+}
+.social-icon:hover{
+    color: orange;
+}
+.footer-nav-link{
+    color: aliceblue;
+    font-size: large;
+    text-decoration: none;
+}
+

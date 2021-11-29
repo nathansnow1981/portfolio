@@ -3,7 +3,7 @@ import TopNav from "./navigation/TopNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import SiteFooter from "./SiteFooter";
+import Footer from "./pages/components/Footer";
 
 const appName = "Portfolio"
 const separator = " - "
@@ -21,7 +21,7 @@ const AppRouter = () => {
             <Route exact path="/contact" element={<Contact />} {...(document.title = "Contact".concat(titleSuffix))} />
           </Routes>
         </div>
-        <SiteFooter />
+        <Footer />
       </div>
     </Router>
   );

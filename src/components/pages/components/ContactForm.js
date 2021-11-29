@@ -2,8 +2,7 @@ import Button from "react-bootstrap/Button";
 import React, { useRef } from "react";
 import { Col, Form, Row } from "react-bootstrap";
 import emailjs from "emailjs-com";
-import "./pages/ContactStyle.css";
-import EmailjsConfig from "../config/EmailjsConfig";
+import EmailjsConfig from "../../../config/EmailjsConfig";
 
 var config = new EmailjsConfig();
 
@@ -55,7 +54,7 @@ const ContactForm = () => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
+              <Form.Text className="text-muted privacy-msg">
                 <i>{emailPrivacyMsg}</i>
               </Form.Text>
             </Form.Group>
@@ -69,7 +68,7 @@ const ContactForm = () => {
             </Form.Group>
           </Col>
         </Row>
-        <Button variant="outline-primary" type="submit">
+        <Button variant="outline-light" type="submit">
           Submit
         </Button>
       </Form>

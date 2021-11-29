@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation } from "react-router";
-import './TopNavStyle.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
 const theme = "dark";

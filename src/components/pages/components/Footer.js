@@ -1,7 +1,6 @@
 import React from 'react';
-import BottomNav from './navigation/BottomNav';
-import "./SiteFooter.css";
-import SocialNav from "./SocialNav";
+import BottomNav from '../../navigation/BottomNav';
+import SocialNav from "../../navigation/SocialNav"
 
 const startYear = 2021;
 const ownerName = "Nathan Snow";
@@ -11,7 +10,7 @@ const copyrightNotice = currentYear > startYear?
         `${ownerName} ${startYear} - ${currentYear} | ${notice}`:
         `${ownerName} ${currentYear} | ${notice}`;
 
-const SiteFooter = () => {
+const Footer = () => {
      return (
        <footer>
          <div className="row center">
@@ -27,4 +26,4 @@ const SiteFooter = () => {
      );
 };
 
-export default SiteFooter;
+export default Footer;

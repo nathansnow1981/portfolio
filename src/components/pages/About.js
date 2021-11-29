@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import "./AboutStyle.css";
 
 const profileImageUrl = "https://i.stack.imgur.com/eBXvB.jpg?s=256&g=1";
 const currentAge = () => {
@@ -10,7 +9,13 @@ const currentAge = () => {
     return now.getFullYear() - dob.getFullYear();
 }
 
+
 const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     return (
       <Col xs="9" md="6 mx-auto">
         <div>

@@ -1,13 +1,14 @@
 # TODO
 
-- [ ] Change contact form field colours
-- [ ] Change contact form send button style and colour
+- [x] Change contact form field colours
+- [x] Change contact form send button style and colour
+- [x] Go to top of page after menu click
 - [x] Change background colour to match header colour
 - [ ] Create an animated floating social media icon bar
 - [ ] Use custom fonts from https://fonts.google.com/ (example already in AboutStyle.css)
 - [ ] Refactor css files
-- [ ] Refactor component names and directories
-
+- [x] Refactor component names and directories
+- [ ] Source social links from database
 - [ ] setup a spring boot application to serve dynamic content via REST API (GCP?)
 
 ## Home
@@ -31,3 +32,5 @@ Back-end Developer
     (Screenshots of the app working) 
     ```
 
+
+#Fix social links
