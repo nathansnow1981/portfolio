@@ -30,3 +30,15 @@ footer {
     width: 100%;
     padding: 15px;
 }
+
+.social-icon{
+    color: aliceblue;
+}
+.social-icon:hover{
+    color: orange;
+}
+.footer-nav-link{
+    color: aliceblue;
+    font-size: large;
+    text-decoration: none;
+}

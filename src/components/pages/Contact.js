@@ -3,8 +3,6 @@ import ContactForm from '../ContactForm';
 
 const Contact = () => {
 
-    document.title = "Contact - Portfolio";
-    
     return (
       <div>
           <h1>Contact Me</h1>
