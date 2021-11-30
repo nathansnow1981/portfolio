@@ -34,24 +34,29 @@ const Home = () => {
     }, []);
     
     return (
-      <Container className="flex-container">
-          {
-              currentProjectsList().map((project, index) => {
-                  return (
-                    <Col className={columnClassName} xs={colXs} sm={colSm} md={colMd} lg={colLg} key={index}>
-                      <Card border={cardBorderVariant} text={cardTextVariant} bg={variant} className={cardClassName}>
-                        <Card.Header>{project.header}</Card.Header>
-                        <Card.Img variant={imagePosition} src={project.image} />
-                        <Card.Body>
-                          <Card.Title>{project.title}</Card.Title>
-                          <Card.Text>{project.description}</Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  );
-              })
-          }
-      </Container>
+      <div>
+        <h1 className="intro p-5">A few of my projects</h1>
+        <Container className="flex-container">
+          {currentProjectsList().map((project, index) => {
+            return (
+              <Col className={columnClassName} xs={colXs} sm={colSm} md={colMd} lg={colLg} key={index}>
+                <Card border={cardBorderVariant} text={cardTextVariant} bg={variant} className={cardClassName}>
+                  <div className="project">
+                    <a className="project-card" href="/" target="_self" rel="noopener noreferrer external" title="Open Project">
+                      <Card.Header>{project.header}</Card.Header>
+                      <Card.Img variant={imagePosition} src={project.image} />
+                      <Card.Body>
+                        <Card.Title>{project.title}</Card.Title>
+                        <Card.Text>{project.description}</Card.Text>
+                      </Card.Body>
+                    </a>
+                  </div>
+                </Card>
+              </Col>
+            );
+          })}
+        </Container>
+      </div>
     );
 };
 

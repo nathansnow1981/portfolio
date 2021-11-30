@@ -182,3 +182,7 @@ footer {
   display: flex;
   flex-wrap: wrap;   
 }
+
+.project-card{
+  color: unset;
+}
