@@ -21,9 +21,10 @@ const currentProjectsList = () => {
 
     let xhr = new XMLHttpRequest();
     xhr.open("get", WebsterConfig.projectsUrl, false);
+    xhr.setRequestHeader("appid", WebsterConfig.appId)
     xhr.send();
     return JSON.parse(xhr.responseText)
-
+    
 }
 
 
